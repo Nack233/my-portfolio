@@ -3,6 +3,31 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #5361ff;
+  --primary-dark: #4351ee;
+  --secondary: #ff3366;
+  --secondary-dark: #e62e5c;
+  --card-bg: #ffffff;
+  --nav-bg-start: #ff3366;
+  --nav-bg-end: #5361ff;
+  --footer-bg: #2a3b47;
+  --footer-text: #697477;
+  --border-color: #2a3b47;
+}
+
+.dark {
+  --background: #111827;
+  --foreground: #f9fafb;
+  --primary: #8b5cf6;
+  --primary-dark: #7c3aed;
+  --secondary: #ec4899;
+  --secondary-dark: #db2777;
+  --card-bg: #1f2937;
+  --nav-bg-start: #4c1d95;
+  --nav-bg-end: #6d28d9;
+  --footer-bg: #0f172a;
+  --footer-text: #94a3b8;
+  --border-color: #4b5563;
 }
 
 @theme inline {
@@ -12,15 +37,14 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode transition effects */
+*, *::before, *::after {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }

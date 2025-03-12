@@ -1,0 +1,160 @@
+/* Theme Variables */
+:root {
+    --background: #ffffff;
+    --foreground: #171717;
+    --primary: #5361ff;
+    --primary-dark: #4351ee;
+    --secondary: #ff3366;
+    --secondary-dark: #e62e5c;
+    --card-bg: #ffffff;
+    --nav-bg-start: #ff3366;
+    --nav-bg-end: #5361ff;
+    --footer-bg: #2a3b47;
+    --footer-text: #697477;
+    --border-color: #2a3b47;
+  }
+  
+  .dark {
+    --background: #111827;
+    --foreground: #f9fafb;
+    --primary: #8b5cf6;
+    --primary-dark: #7c3aed;
+    --secondary: #ec4899;
+    --secondary-dark: #db2777;
+    --card-bg: #1f2937;
+    --nav-bg-start: #4c1d95;
+    --nav-bg-end: #6d28d9;
+    --footer-bg: #0f172a;
+    --footer-text: #94a3b8;
+    --border-color: #4b5563;
+  }
+  
+  /* Section titles */
+  .section-title {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+  
+  .section-title span {
+    position: absolute;
+    width: 4rem;
+    height: 0.18rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 3rem;
+    background-color: var(--primary);
+  }
+  
+  @media (max-width: 768px) {
+    .section-title span {
+      width: 2rem;
+      top: 2rem;
+    }
+  }
+  
+  /* Header and Navigation */
+  header {
+    background: linear-gradient(to right, var(--nav-bg-start), var(--nav-bg-end));
+  }
+  
+  .nav-link {
+    position: relative;
+    color: var(--foreground);
+  }
+  
+  .nav-link.active span {
+    position: absolute;
+    left: 0;
+    top: 2rem;
+    width: 100%;
+    height: 0.18rem;
+    background-color: var(--primary);
+  }
+  
+  @media (min-width: 768px) {
+    .nav-link {
+      color: white;
+    }
+    
+    .nav-link.active span {
+      background-color: white;
+    }
+  }
+  
+  /* Home Section */
+  #home {
+    background: linear-gradient(to right, var(--nav-bg-start), var(--nav-bg-end));
+  }
+  
+  /* About Section */
+  .about-subtitle {
+    color: var(--primary);
+  }
+  
+  .about-social-icon:hover {
+    color: var(--primary);
+  }
+  
+  /* Skills Section */
+  .skills-subtitle {
+    color: var(--primary);
+  }
+  
+  .skills-name {
+    transition: all 0.3s ease;
+  }
+  
+  .skills-name:hover {
+    background-color: var(--primary);
+    color: white;
+  }
+  
+  /* Portfolio Section */
+  #portfolio {
+    background-color: var(--card-bg);
+  }
+  
+  .portfolio-link {
+    background-color: var(--card-bg);
+    background-color: rgba(var(--card-bg), 0.3);
+    backdrop-filter: blur(5px);
+  }
+  
+  /* Contact Section */
+  .contact-subtitle {
+    color: var(--primary);
+  }
+  
+  .contact-input {
+    background: transparent;
+    border: 1.5px solid var(--border-color);
+  }
+  
+  .contact-button {
+    background-color: var(--primary);
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--footer-bg);
+  }
+  
+  .footer-text {
+    color: var(--footer-text);
+  }
+  
+  .footer-link:hover {
+    color: var(--primary);
+  }
+  
+  /* Dark Mode Transitions */
+  *, *::before, *::after {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
